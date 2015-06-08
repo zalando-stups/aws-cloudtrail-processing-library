@@ -1,8 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <!--to deploy use:-->
+    <!--mvn clean deploy -Pcustom-release,maven-->
+    <parent>
+        <groupId>org.zalando.stups.build</groupId>
+        <artifactId>stups-build</artifactId>
+        <version>4</version>
+    </parent>
+
     <groupId>org.zalando.stups</groupId>
     <artifactId>aws-cloudtrail-processing-library</artifactId>
+
+
     <packaging>jar</packaging>
     <name>AWS CloudTrail Processing Library for Java</name>
     <version>1.0.0</version>
@@ -16,6 +27,19 @@
         <url>https://github.com/awslabs/aws-cloudtrail-processing-library.git
         </url>
     </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <name>Nexus Release Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
 
     <licenses>
         <license>
@@ -90,6 +114,22 @@
                             <goals>
                                 <goal>sign</goal>
                             </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.10</version>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                            <configuration>
+                                <additionalparam>-Xdoclint:none</additionalparam>
+                            </configuration>
                         </execution>
                     </executions>
                 </plugin>
