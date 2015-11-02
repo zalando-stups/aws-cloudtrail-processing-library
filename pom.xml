@@ -20,8 +20,8 @@
 
     <scm>
         <url>https://github.com/zalando-stups/aws-cloudtrail-processing-library</url>
-        <connection>scm:git:https://github.com/zalando-stups/aws-cloudtrail-processing-library.git</connection>
-        <developerConnection>scm:git:https://github.com/zalando-stups/aws-cloudtrail-processing-library.git</developerConnection>
+        <connection>scm:git:git@github.com:zalando-stups/aws-cloudtrail-processing-library.git</connection>
+        <developerConnection>scm:git:git@github.com:zalando-stups/aws-cloudtrail-processing-library.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
