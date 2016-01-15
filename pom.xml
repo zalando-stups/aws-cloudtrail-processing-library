@@ -11,7 +11,7 @@
 
     <packaging>jar</packaging>
     <name>AWS CloudTrail Processing Library for Java</name>
-    <version>1.0.1-ZAL-2</version>
+    <version>1.0.1-ZAL-3-SNAPSHOT</version>
     <description>AWS CloudTrail Processing Library for Java helps Java
         developers to easily consume and process log files from AWS
         CloudTrail.
@@ -22,7 +22,7 @@
         <url>https://github.com/zalando-stups/aws-cloudtrail-processing-library</url>
         <connection>scm:git:git@github.com:zalando-stups/aws-cloudtrail-processing-library.git</connection>
         <developerConnection>scm:git:git@github.com:zalando-stups/aws-cloudtrail-processing-library.git</developerConnection>
-        <tag>1.0.1-ZAL-2</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <licenses>
