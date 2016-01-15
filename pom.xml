@@ -35,7 +35,7 @@
 
     <properties>
         <aws-java-sdk.version>1.10.27</aws-java-sdk.version>
-        <json-path.version>2.0.0</json-path.version>
+        <json-path.version>2.1.0</json-path.version>
 
         <license.failIfMissing>false</license.failIfMissing>
         <java.source>1.7</java.source>
